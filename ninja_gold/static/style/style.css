@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+}
+
+.reset {
+    margin: 20px;
+}
+
+.place {
+    width: 25%;
+    height: 250px;
+    margin: 10px;
+    border: 1px solid black;
+    text-align: center;
+    padding: 40px;
+}
+
+.activities {
+    overflow: scroll;
+    border: 1px solid black;
+    width: inherit;
+    margin: 10px;
+    height: 100px;
+}
+
+.activities li {
+    list-style: none;
+}
+
+.earned {
+    color: green;
+}
+
+.lost {
+    color: red;
+}

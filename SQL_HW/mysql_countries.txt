@@ -1,0 +1,8 @@
+1. SELECT * from countries left join languages on countries.id = languages.country_id where language="slovene"
+2. SELECT countries.name, count(*) as cities from cities left join countries on cities.country_id = countries.id group by countries.name order by cities desc
+3. SELECT * from countries left join cities on countries.id = cities.country_id where countries.name="mexico" and cities.population > 500000 order by cities.population desc
+4. SELECT * from countries left join languages on countries.id = languages.country_id where languages.percentage > 89 order by languages.percentage desc
+5. SELECT * from countries where surface_area < 501 and population > 100000
+6. SELECT * from countries where government_form = "constitutional monarchy" and capital > 200 and life_expectancy > 75
+7. SELECT countries.name, cities.name, cities.district, cities.population from cities left join countries on cities.country_id = countries.id where countries.name = "argentina" and cities.district = "Buenos Aires" and cities.population > 500000
+8. Select region, count(*) as countries from countries group by region order by countries desc

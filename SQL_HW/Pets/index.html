@@ -1,0 +1,27 @@
+<html>
+<head>
+  <title>Pets</title>
+</head>
+<body>
+    {{ all_pet }}
+    <h1>All the Pets!</h1>
+    {% for pet in all_pet: %}
+    <p>ID: {{ pet['id'] }}</p>
+    <p>Name: {{ pet['name'] }}</p>
+    <p>type: {{ pet['type'] }}</p>
+    <hr>
+    {% endfor %}
+  <h2>Add a Pet</h2>
+  <form action='/pet' method='POST'>
+    <label for="name">Name:<input type="text" name="name" id="name"></label>
+    <label for="type">Type:<input type="text" name="type" id="type"></label>
+    <input type="submit" value="Add">
+  </form>
+  <form action='/update_pet/<pet_id>' method='POST'>
+        <label for="pet_id">Pet Id:</label><input type="text" name="pet_id" id="pet_id"></label>
+    <label for="name">Name:<input type="text" name="name" id="name"></label>
+    <label for="type">Type:<input type="text" name="type" id="type"></label>
+    <input type="submit" value="Update">
+  </form>
+</body>
+</html>
